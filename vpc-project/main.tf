@@ -130,7 +130,6 @@ resource "aws_instance" "web" {
   vpc_security_group_ids = [aws_security_group.web-sg.id]
   subnet_id     = aws_subnet.public-subnet.id
   associate_public_ip_address = "true"
-  key_name               = "sk-demo"
   user_data     = <<-EOF
         #!/bin/bash
         sudo apt-get update -y
